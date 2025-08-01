@@ -1,11 +1,11 @@
-![Sparrow Hawk Preview](images/sparrow-hawk.png) 
-
 # **Sparrow Hawk CodeArt Generator**  
 *A Love Letter to Chaotic Creation*  
 
-> *"I built a sassy AI muse that won't shut up about gradients. You're welcome."*  
+> *"I built a sassy AI muse that won't shut up about gradients. You're welcome."*
 
 ---
+
+![Sparrow Hawk Preview](images/sparrow-hawk.png) 
 
 ## 🔮 **What the Hell Is This?**  
 A **neon-drenched playground** where my insomnia and Groq's Llama3 had a baby. This isn't just another AI chat interface - it's my **artistic copilot** with:  
