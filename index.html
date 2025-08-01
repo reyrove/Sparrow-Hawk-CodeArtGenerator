@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sparrow Hawk | CodeArt Generator</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" href="images/cropped_circle_image.png" type="image/png" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Source+Code+Pro:wght@400;700&family=Dancing+Script&display=swap" rel="stylesheet">
+</head>
+<body>
+<header>
+  <div class="header-container">
+    <div class="header-content">
+      <img src="images/sparrow-hawk.png" alt="Sparrow profile" class="profile-pic">
+      <div class="hawk-quote">
+        <em>I don’t create—I collaborate with entropy!</em>
+      </div>
+    </div>
+  </div>
+</header>
+  <main id="chat" role="log" aria-live="polite" aria-relevant="additions"></main>
+  <div id="input-container">
+    <textarea 
+      id="input" 
+      placeholder="Ask me anything... if you dare!" 
+      rows="1" 
+      aria-label="Chat input"
+      spellcheck="true"
+    ></textarea>
+    <button id="sendBtn" disabled aria-label="Send message">
+      <span class="btn-text">Unleash the Hawk</span>
+    </button>
+  </div>
+<footer>
+<p>
+  © 2025 All rights reserved. Crafted with caffeine & chaotic energy by 
+  <strong><a href="https://reyrove.github.io/" target="_blank" rel="noopener noreferrer" class="footer-link">Reyrove</a></strong>, 
+  <strong><a href="https://console.groq.com/" target="_blank" rel="noopener noreferrer" class="footer-link">Groq Cloud</a></strong>,
+  and hosted on <strong><a href="https://vercel.com" target="_blank" rel="noopener noreferrer" class="footer-link">Vercel</a></strong>.
+</p>
+</footer>
+  <script src="script.js"></script>
+</body>
+</html>
