@@ -1,3 +1,5 @@
+![Sparrow Hawk Preview](images/sparrow-hawk.png) 
+
 # **Sparrow Hawk CodeArt Generator**  
 *A Love Letter to Chaotic Creation*  
 
