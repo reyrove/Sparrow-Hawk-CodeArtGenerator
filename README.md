@@ -28,12 +28,15 @@ A **neon-drenched playground** where my insomnia and Groq's Llama3 had a baby. T
 
 ## 🌐 **Where to Play With My Creation**  
 
-![Sparrow Hawk Preview](images/demo.png) 
-
 🔗 **[sparrow-hawk-code-art-generator.vercel.app](https://sparrow-hawk-code-art-generator.vercel.app/)**  
 
-![QR Code](images/qr-code.png)  
-*(Scan this at 3AM for best results)*  
+![Sparrow Hawk Preview](images/demo.png) 
+
+<p align="center">
+  <img src="images/qr-code.png" alt="Sparrow Hawk QR Code" width="200">  
+  <br>
+  <em>(Scan this at 3AM for best results)</em>
+</p>
 
 ---
 
@@ -98,8 +101,4 @@ For collaborations:
 ---
 
 **Final Note:**  
-> "This project contains 73% caffeine, 25% spite, and 2% actual useful code."  
-
-![Sparrow Hawk Screenshot](images/screenshot.png)  
-
-*Now go make something dangerously creative.* 🖤
+> "This project contains 73% caffeine, 25% spite, and 2% actual useful code."
