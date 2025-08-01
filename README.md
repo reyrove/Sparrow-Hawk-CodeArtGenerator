@@ -27,6 +27,9 @@ A **neon-drenched playground** where my insomnia and Groq's Llama3 had a baby. T
 ---
 
 ## 🌐 **Where to Play With My Creation**  
+
+![Sparrow Hawk Preview](images/demo.png) 
+
 🔗 **[sparrow-hawk-code-art-generator.vercel.app](https://sparrow-hawk-code-art-generator.vercel.app/)**  
 
 ![QR Code](images/qr-code.png)  
