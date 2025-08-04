@@ -85,7 +85,7 @@ const techStack = {
 ---
 
 ## 📜 **License**  
-**WTFPL** - Do what you want, just don't make it ugly & credit me!  
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 ---
 
