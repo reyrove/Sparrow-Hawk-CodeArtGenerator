@@ -3,7 +3,7 @@
 // ======================
 const config = {
   apiUrl: '/api/groq', // Now using serverless function
-  model: 'llama3-70b-8192',
+  model: 'llama-3.3-70b-versatile',
   sparrowPic: "/images/sparrow-hawk.png",
   reyroveUrl: "https://reyrove.github.io/"
 };
