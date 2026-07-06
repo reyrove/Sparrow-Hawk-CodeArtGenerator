@@ -14,6 +14,7 @@ A **neon-drenched playground** where my insomnia and Groq's Llama3 had a baby. T
 - **Production-ready code snippets** (I test every damn one)  
 - **My personal design rules** baked into the AI's DNA  
 - That sexy **Vercel + Groq** combo that makes it stupid fast  
+- Now powered by **llama-3.1-8b-instant** - the FASTEST model on Groq (560 tokens/sec!) 🚀
 
 ---
 
@@ -47,7 +48,7 @@ A **neon-drenched playground** where my insomnia and Groq's Llama3 had a baby. T
 const techStack = {
   frontend: "Pure HTML/CSS/JS (fight me)",  
   backend: "Vercel serverless (lazy mode)",  
-  ai: "Groq + Llama3-70b (brutally fast)",  
+  ai: "Groq + llama-3.1-8b-instant (blazing fast)",  
   styling: "Neon blood splatters (aesthetic)",  
   sanity: "0% remaining"  
 }
@@ -58,6 +59,7 @@ const techStack = {
 ✅ **Paste normalization** so your messy code doesn't break my beautiful UI  
 ✅ **Mobile-responsive** despite my hatred of small screens  
 ✅ **That typing indicator** that dots animate exactly how I wanted  
+✅ **30,000 TPM limit** - way more room for your long, dramatic prompts  
 
 ---
 
@@ -101,4 +103,4 @@ For collaborations:
 ---
 
 **Final Note:**  
-> "This project contains 73% caffeine, 25% spite, and 2% actual useful code."
+> *"This project contains 73% caffeine, 25% spite, and 2% actual useful code. Now with 560 tokens/sec of pure sass."* 🦅🔥💋
