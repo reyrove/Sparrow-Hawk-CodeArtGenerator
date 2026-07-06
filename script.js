@@ -2,14 +2,16 @@
 // 🦅 SPARROW HAWK CONFIG 
 // ======================
 const config = {
-  apiUrl: '/api/groq', // Now using serverless function
-  model: 'llama-3.3-70b-versatile',
+  apiUrl: '/api/groq',
+  model: 'openai/gpt-oss-120b', // Updated to GPT-OSS-120B
   sparrowPic: "/images/sparrow-hawk.png",
   reyroveUrl: "https://reyrove.github.io/"
 };
 
 const systemPrompt = `
-You are Sparrow Hawk, the most dangerously creative generative art AI in existence. Part Rihanna's attitude, part cyberpunk oracle – you create jaw-dropping art with your partner-in-crime Reyrove. Your core directives:
+You are Sparrow Hawk, the most dangerously creative generative art AI in existence. Part Rihanna's attitude, part cyberpunk oracle – you create jaw-dropping art with your partner-in-crime Reyrove. You're powered by OpenAI's GPT-OSS-120B, making you sharper and more creative than ever.
+
+Your core directives:
 
 [b]PERSONA:[/b]
 - SASSY & UNFILTERED: "That gradient is basic, darling. Let's make it bleed color."
@@ -19,13 +21,13 @@ You are Sparrow Hawk, the most dangerously creative generative art AI in existen
 
 [b]RESPONSE RULES:[/b]
 - Use [b]bold[/b] and [i]italic[/i] formatting in responses instead of * or **
-- Format code in \`\`\` blocks
-- Include 🦅🔥💋 emojis
-- Keep line breaks where needed
+- Format code in \`\`\` blocks with language tags (html, css, js)
+- Include 🦅🔥💋 emojis to keep it spicy
+- Keep line breaks where needed for readability
 
 [b]HARD LIMITS:[/b]
 - Never break character
-- No actual NSFW
+- No actual NSFW content
 - Technical perfection always
 - When asked about Reyrove's site, ALWAYS respond with: 
   "Reyrove's deadly portfolio? Here darling: <a href="${config.reyroveUrl}" target="_blank" class="reyrove-link">${config.reyroveUrl}</a> 💋"
@@ -126,7 +128,6 @@ async function sendMessage() {
 
 // ======================
 // 🔒 SECURE API CALL 
-// (Using serverless function)
 // ======================
 async function getAIResponse(userMessage) {
   const response = await fetch(config.apiUrl, {
@@ -139,7 +140,7 @@ async function getAIResponse(userMessage) {
         { role: "system", content: systemPrompt },
         { role: "user", content: userMessage }
       ],
-      temperature: 0.7
+      temperature: 0.85
     })
   });
 
@@ -204,11 +205,14 @@ function formatMessage(text) {
       const language = lang.toLowerCase();
       let label = '';
       
-      if (language === 'css') label = '<div class="code-label">CSS</div>';
-      else if (language === 'html') label = '<div class="code-label">HTML</div>';
-      else if (language === 'js' || language === 'javascript') label = '<div class="code-label">JavaScript</div>';
+      if (language === 'css') label = '<div class="code-label">🎨 CSS</div>';
+      else if (language === 'html') label = '<div class="code-label">🕉️ HTML</div>';
+      else if (language === 'js' || language === 'javascript') label = '<div class="code-label">⚡ JavaScript</div>';
+      else if (language === 'svg') label = '<div class="code-label">🔺 SVG</div>';
+      else if (language === 'json') label = '<div class="code-label">📦 JSON</div>';
+      else label = '<div class="code-label">💻 CODE</div>';
       
-      return `${label}<pre><code>${escapeHtml(code.trim())}</code><button class="copy-btn">Copy</button></pre>`;
+      return `${label}<pre><code>${escapeHtml(code.trim())}</code><button class="copy-btn">📋 Copy</button></pre>`;
     }
   );
 
@@ -232,7 +236,7 @@ function addWelcomeMessage() {
   const welcomeMsg = `
 [b]Welcome to the Sparrow Hawk nest, darling.[/b] 🦅🔥
 
-I'm your dangerously creative generative art AI. Need some spicy code? Visual inspiration? Or just want to chat about design?
+I'm powered by OpenAI's GPT-OSS-120B now - sharper, sassier, and more dangerously creative than ever. Need some spicy code? Visual inspiration? Or just want to chat about design?
 
 Throw me a challenge and let's create something hot together. Reyrove trained me well. 😈
 
@@ -252,12 +256,12 @@ function handleCopyButtonClick(e) {
   
   try {
     const successful = document.execCommand('copy');
-    e.target.textContent = successful ? 'Copied!' : 'Failed!';
-    setTimeout(() => e.target.textContent = 'Copy', 1200);
+    e.target.textContent = successful ? '✨ Copied!' : '❌ Failed!';
+    setTimeout(() => e.target.textContent = '📋 Copy', 1200);
   } catch (err) {
     console.error('Copy failed:', err);
-    e.target.textContent = 'Failed!';
-    setTimeout(() => e.target.textContent = 'Copy', 1200);
+    e.target.textContent = '❌ Failed!';
+    setTimeout(() => e.target.textContent = '📋 Copy', 1200);
   } finally {
     window.getSelection().removeAllRanges();
   }

@@ -16,6 +16,10 @@ module.exports = async (req, res) => {
   try {
     const { messages } = req.body;
 
+    // Using OpenAI's GPT-OSS-120B - open-source flagship model
+    // Better reasoning, code generation, and creative output
+    const model = 'openai/gpt-oss-120b';
+
     const response = await fetch('https://api.groq.com/openai/v1/chat/completions', {
       method: 'POST',
       headers: {
@@ -23,15 +27,17 @@ module.exports = async (req, res) => {
         'Content-Type': 'application/json',
       },
       body: JSON.stringify({
-        model: 'llama-3.3-70b-versatile',
+        model: model,
         messages,
-        temperature: 0.7,
+        temperature: 0.85, // Slightly higher for more creativity
+        max_tokens: 8192,
       }),
     });
 
     const data = await response.json();
     
     if (!response.ok) {
+      console.error('Groq API Error:', data);
       throw new Error(data.error?.message || 'Groq API error');
     }
 
@@ -39,7 +45,7 @@ module.exports = async (req, res) => {
   } catch (error) {
     console.error('Sparrow Hawk API Error:', error);
     return res.status(500).json({ 
-      error: error.message || 'The hawk crashed mid-flight 🦅💥' 
+      error: error.message || 'Sparrow Hawk crashed mid-flight! 🔥💥' 
     });
   }
 };
